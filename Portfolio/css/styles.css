@@ -35,17 +35,21 @@ body {
 .navbar {
   display: flex;
   justify-content: space-between;
-  padding: 2em;
+  padding: 3em;
 }
 
 .brand {
-  margin-top: -7px;
+  margin-top: -16px;
   animation: flip;
   animation-duration: 3s;
 }
 
 .brand span {
   color: #f7b0b0;
+}
+
+.brand h1 {
+  font-size: xx-large;
 }
 
 .menu {
@@ -79,4 +83,39 @@ body {
   height: 80vh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+
+.info-content span {
+  color: #f7b0b0;
+}
+
+.info-content h1 {
+  font-size: 3em;
+}
+
+.download-cv {
+  color: rgba(130, 28, 156, 1);
+  padding: 10px 20px;
+  background-color: #f7b0b0;
+  border: none;
+  border-radius: 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  box-shadow: 1px 3px 11px -5px rgba(130, 28, 156, 0.69);
+}
+
+.download-cv:hover {
+  background-color: #fff;
+  box-shadow: none;
+  transition: ease-in 0.5s;
+}
+
+.logo {
+  font-size: 8em;
+  text-align: center;
+}
+
+.logo span {
+  color: #f7b0b0;
 }

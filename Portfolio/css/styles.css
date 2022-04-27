@@ -10,24 +10,20 @@ body {
 }
 
 .wrapper {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background: rgb(130, 28, 156);
   background: -moz-linear-gradient(
     180deg,
     rgba(130, 28, 156, 1) 0%,
-    rgba(203, 113, 172, 1) 100%
+    black 100%
   );
   background: -webkit-linear-gradient(
     180deg,
     rgba(130, 28, 156, 1) 0%,
-    rgba(203, 113, 172, 1) 100%
+    black 100%
   );
-  background: linear-gradient(
-    180deg,
-    rgba(130, 28, 156, 1) 0%,
-    rgba(203, 113, 172, 1) 100%
-  );
+  background: linear-gradient(180deg, rgba(130, 28, 156, 1) 0%, black 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#821c9c",endColorstr="#cb71ac",GradientType=1);
   color: #fff;
 }
@@ -45,7 +41,7 @@ body {
 }
 
 .brand span {
-  color: #f7b0b0;
+  color: #cfbe11;
 }
 
 .brand h1 {
@@ -56,6 +52,7 @@ body {
   display: flex;
   width: 50%;
   justify-content: space-around;
+  text-align: center;
 }
 
 .menu li {
@@ -69,11 +66,11 @@ body {
 }
 
 .menu .active {
-  color: #f7b0b0;
+  color: #cfbe11;
 }
 
 .menu a:hover {
-  color: #f7b0b0;
+  color: #cfbe11;
   transition: ease-in 0.5s;
 }
 
@@ -87,7 +84,7 @@ body {
 }
 
 .info-content span {
-  color: #f7b0b0;
+  color: #cfbe11;
 }
 
 .info-content h1 {
@@ -97,12 +94,12 @@ body {
 .download-cv {
   color: rgba(130, 28, 156, 1);
   padding: 10px 20px;
-  background-color: #f7b0b0;
+  background-color: #cfbe11;
   border: none;
   border-radius: 20px;
   margin-top: 10px;
   cursor: pointer;
-  box-shadow: 1px 3px 11px -5px rgba(130, 28, 156, 0.69);
+  box-shadow: 1px 3px 11px -5px rgba(130, 28, 156, 1);
 }
 
 .download-cv:hover {
@@ -117,5 +114,178 @@ body {
 }
 
 .logo span {
-  color: #f7b0b0;
+  color: #cfbe11;
+}
+
+.logo2 {
+  font-size: 8em;
+  color: #fff;
+}
+
+.logo2 span {
+  color: #cfbe11;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  width: 100%;
+  background: black;
+  align-items: center;
+}
+
+.about img {
+  height: auto;
+  width: 80%;
+  grid-column: 1/5;
+  border: 7px solid black;
+}
+
+.about-info h2 {
+  color: #cfbe11;
+  font-size: 3em;
+}
+
+.about-info {
+  grid-column: 5/10;
+  padding: 3em;
+  color: #fff;
+}
+
+.divider {
+  height: 4px;
+  width: 60px;
+  background-color: #cfbe11;
+  margin-top: 5px;
+  margin-bottom: 2em;
+}
+
+.about p {
+  margin-bottom: 1em;
+  font-size: 1.2em;
+}
+
+.portfolio {
+  width: 100%;
+
+  background: rgb(0, 0, 0);
+  background: -moz-linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(130, 28, 156, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(130, 28, 156, 1) 100%
+  );
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(130, 28, 156, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#821c9c",GradientType=1);
+}
+
+.portfolio-headings {
+  width: 100%;
+  padding: 7em;
+}
+
+.portfolio-headings h2 {
+  color: #cfbe11;
+  font-size: 3em;
+}
+
+.portfolio .container {
+  width: 80vw;
+  height: 80vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  width: 300px;
+  background-color: #6d1782;
+  border: 4px solid #cfbe11;
+  height: 350px;
+  margin: 1em;
+}
+
+.card__img {
+  background-color: #fff;
+}
+
+.card__img video {
+  width: 100%;
+  height: 150px;
+}
+
+.card__title h2 {
+  text-align: center;
+  padding: 20px;
+  color: #cfbe11;
+}
+
+.card__projects-links {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.card__projects-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.card__projects-links i {
+  font-size: 1.5em;
+}
+
+.card__projects-links i:hover {
+  color: #cfbe11;
+  transition: ease-in 0.5s;
+}
+
+.card .project-details {
+  text-transform: uppercase;
+  margin: 0 auto;
+  margin: 1em;
+  width: 60%;
+  background-color: #fff;
+}
+
+.project-details-content {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 0.5em;
+}
+
+.card .project-details:hover {
+  background-color: #cfbe11;
+  box-shadow: none;
+  transition: ease-in 0.5s;
+}
+
+.contact-section {
+  background: #811c9b;
+}
+
+.contact-headings {
+  margin-left: 7em;
+}
+
+.contact-headings h2 {
+  color: #cfbe11;
+  font-size: 3em;
+}
+
+.container-contact {
+  margin: 0 auto;
+  width: 80vw;
+  height: 50vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
 }

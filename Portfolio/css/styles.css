@@ -275,7 +275,7 @@ body {
     rgba(130, 28, 156, 1) 100%
   );
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#821c9c",GradientType=1);
-  margin-top: -7em;
+  margin-top: -2em;
 }
 
 .contact-headings {
@@ -291,7 +291,7 @@ body {
   padding: 3em;
   margin: 0 auto;
   width: 80vw;
-  height: 60vh;
+  height: 80vh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
@@ -374,3 +374,4 @@ body {
   color: #821c9c;
   transition: ease-in 0.5s;
 }
+

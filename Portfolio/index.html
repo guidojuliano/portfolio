@@ -24,105 +24,145 @@
     <script src="https://unpkg.com/scrollreveal"></script>
   </head>
   <body>
-    <div class="wrapper">
-      <header class="header">
-        <nav class="navbar">
-          <div class="brand">
+    <section class="section" id="home">
+      <div class="wrapper">
+        <header class="header">
+          <nav class="navbar">
+            <div class="brand">
+              <h1>G<span>J</span></h1>
+            </div>
+            <ul class="menu menu_item">
+              <li class="active menu_item" data-url="home">
+                <a href="#">Home</a>
+              </li>
+              <li class="menu_item" data-url="about">
+                <a href="#">About me</a>
+              </li>
+              <li class="menu_item" data-url="portfolio">
+                <a href="#">Portfolio</a>
+              </li>
+              <li class="menu_item" data-url="contact">
+                <a href="#">Contact</a>
+              </li>
+            </ul>
+          </nav>
+        </header>
+
+        <main class="main">
+          <div class="info-content">
+            <h1>I'm Guido <span>Juliano</span></h1>
+            <p>Web developer, electronic technical and student.</p>
+            <a href="/Portfolio/archivos/CV_MAZZUCHINI.pdf" download>
+              <button class="download-cv">Download CV</button>
+            </a>
+          </div>
+          <div class="logo animate__animated animate__pulse animate__infinite">
             <h1>G<span>J</span></h1>
           </div>
-          <ul class="menu">
-            <li><a class="active" href="#">Home</a></li>
-            <li><a href="#">About me</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </nav>
-      </header>
-
-      <main class="main">
-        <div class="info-content">
-          <h1>I'm Guido <span>Juliano</span></h1>
-          <p>Web developer, electronic technical and student.</p>
-          <a href="/Portfolio/archivos/CV_MAZZUCHINI.pdf" download>
-            <button class="download-cv">Download CV</button>
-          </a>
-        </div>
-        <div class="logo animate__animated animate__pulse animate__infinite">
-          <h1>G<span>J</span></h1>
-        </div>
-      </main>
-    </div>
-    <div class="about">
-      <img class="image-profile" src="./img/fotoperfil.jpg" alt="foto_perfil" />
-      <div class="about-info">
-        <h2 class="about-me">About me</h2>
-        <div class="divider"></div>
-        <p class="p1">
-          I'm Guido Juliano i have 28 years old, I'm living in Resistencia,
-          Chaco. I'm studing engineering of systems in UTN and at this moment
-          working in the Ministry of Education like full stack developer.
-        </p>
-        <p class="p2">
-          Now we are working with Python, HTML, CSS, JavaScript, Django,
-          Postgres, containers of Docker and repositories and versioned whit
-          Github. I consider myself a person who adapts very quickly in the
-          workplace, I am quite self-taught and I like to work in a team.
-        </p>
+        </main>
       </div>
-    </div>
-    <div class="portfolio">
-      <div class="portfolio-headings">
-        <h2>My Portfolio</h2>
-        <div class="divider"></div>
+    </section>
+    <section class="section" id="about">
+      <div class="about">
+        <img
+          class="image-profile"
+          src="./img/fotoperfil.jpg"
+          alt="foto_perfil"
+        />
+        <div class="about-info">
+          <h2 class="about-me">About me</h2>
+          <div class="divider"></div>
+          <p class="p1">
+            I'm Guido Juliano i have 28 years old, I'm living in Resistencia,
+            Chaco. I'm studing engineering of systems in UTN and at this moment
+            working in the Ministry of Education like full stack developer.
+          </p>
+          <p class="p2">
+            Now we are working with Python, HTML, CSS, JavaScript, Django,
+            Postgres, containers of Docker and repositories and versioned whit
+            Github. I consider myself a person who adapts very quickly in the
+            workplace, I am quite self-taught and I like to work in a team.
+          </p>
+        </div>
       </div>
+    </section>
+    <section class="section" id="portfolio">
+      <div class="portfolio">
+        <div class="portfolio-headings">
+          <h2>My Portfolio</h2>
+          <div class="divider"></div>
+        </div>
 
-      <div class="container">
-        <div class="card">
-          <div class="card__img">
-            <video src="/Portfolio/img/ecoblog.mp4" autoplay loop muted></video>
-          </div>
-          <div class="card__title">
-            <h2>Ecoblog</h2>
-          </div>
-          <div class="card__projects-links">
-            <a
-              href="https://github.com/guidojuliano/RepositorioEcoBlog"
-              target="_blank"
-            >
-              <i class="fa-brands fa-github"></i>
-            </a>
-            <a
-              href="https://www.youtube.com/watch?v=oHKKnqnNNqk&t=11s"
-              target="_blank"
-            >
-              <i class="fa-brands fa-youtube"></i>
-            </a>
-          </div>
-          <div class="project-details-content">
-            <button class="project-details download-cv">Project Details</button>
+        <div class="container">
+          <div class="card">
+            <div class="card__img">
+              <video
+                src="/Portfolio/img/ecoblog.mp4"
+                autoplay
+                loop
+                muted
+              ></video>
+            </div>
+            <div class="card__title">
+              <h2>Ecoblog</h2>
+            </div>
+            <div class="card__projects-links">
+              <a
+                href="https://github.com/guidojuliano/RepositorioEcoBlog"
+                target="_blank"
+              >
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a
+                href="https://www.youtube.com/watch?v=oHKKnqnNNqk&t=11s"
+                target="_blank"
+              >
+                <i class="fa-brands fa-youtube"></i>
+              </a>
+            </div>
+            <div class="project-details-content">
+              <button class="project-details download-cv">
+                Project Details
+              </button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-
-    <div class="contact-section">
-      <div class="contact-headings">
-        <h2>Contact</h2>
-        <div class="divider"></div>
-      </div>
-
-      <div class="container-contact">
-        <div class="logo2">
-          <h1>G<span>J</span></h1>
+    </section>
+    <section class="section" id="contact">
+      <div class="contact-section">
+        <div class="contact-headings">
+          <h2>Contact</h2>
+          <div class="divider"></div>
         </div>
-        <form class="form-contact">
-          <input type="text" placeholder="Name" />
-          <input type="email" placeholder="Email" />
-          <textarea placeholder="Place your message here..."> </textarea>
-          <button type="submit" class="btn-submit">Send message</button>
-        </form>
+
+        <div class="container-contact">
+          <div class="logo2">
+            <h1>G<span>J</span></h1>
+          </div>
+          <form class="form-contact">
+            <input type="text" placeholder="Name" />
+            <input type="email" placeholder="Email" />
+            <textarea placeholder="Place your message here..."></textarea>
+            <button type="submit" class="btn-submit">Send message</button>
+          </form>
+        </div>
       </div>
-    </div>
+    </section>
+    <footer class="footer">
+      <div class="footer-content">
+        <h2>Guido Juliano Ubaldi</h2>
+        <h5>Web Developer</h5>
+      </div>
+      <div class="sotial-network">
+        <a href="https://www.instagram.com/guidojulianou/"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+        <a href="https://www.linkedin.com/in/guidojuliano/"
+          ><i class="fa-brands fa-linkedin-in"></i
+        ></a>
+      </div>
+    </footer>
 
     <script>
       ScrollReveal().reveal(".header");

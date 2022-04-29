@@ -26,23 +26,23 @@
   <body>
     <section class="section" id="home">
       <div class="wrapper">
-        <header class="header">
+        <header>
+          <div class="brand">
+            <h1>G<span>J</span></h1>
+          </div>
           <nav class="navbar">
-            <div class="brand">
-              <h1>G<span>J</span></h1>
-            </div>
             <ul class="menu menu_item">
               <li class="active menu_item" data-url="home">
-                <a href="#">Home</a>
+                <a href="#home">Home</a>
               </li>
               <li class="menu_item" data-url="about">
-                <a href="#">About me</a>
+                <a href="#about">About me</a>
               </li>
               <li class="menu_item" data-url="portfolio">
-                <a href="#">Portfolio</a>
+                <a href="#portfolio">Portfolio</a>
               </li>
               <li class="menu_item" data-url="contact">
-                <a href="#">Contact</a>
+                <a href="#contact">Contact</a>
               </li>
             </ul>
           </nav>
@@ -163,7 +163,7 @@
         ></a>
       </div>
     </footer>
-
+    <script src="./js/main.js"></script>
     <script>
       ScrollReveal().reveal(".header");
       ScrollReveal().reveal(".info-content", { delay: 500 });

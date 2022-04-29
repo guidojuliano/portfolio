@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
 }
@@ -28,16 +32,57 @@ body {
   color: #fff;
 }
 
-.navbar {
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 3em;
+  transition: 0.7s;
+  padding: 30px 50px;
+  z-index: 10;
+}
+
+header.down {
+  background: #cfbe11;
+  padding: 15px 50px;
+  color: black;
+}
+
+header.down .brand {
+  color: #fff;
+}
+
+header.down span {
+  color: #821c9c;
+}
+
+header.down .menu .active a {
+  color: #fff;
+}
+
+header.down .menu a {
+  color: black;
+}
+
+header.down .menu a:hover {
+  color: #fff;
+  transition: ease-in 0.5s;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .brand {
-  margin-top: -16px;
+  position: relative;
+  color: #fff;
   animation: flip;
   animation-duration: 3s;
+  transition: 0.7s;
 }
 
 .brand span {
@@ -45,14 +90,14 @@ body {
 }
 
 .brand h1 {
-  font-size: xx-large;
+  font-size: 3em;
 }
 
-.menu {
+header ul {
+  position: relative;
   display: flex;
-  width: 50%;
-  justify-content: space-around;
-  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .menu li {
@@ -60,12 +105,16 @@ body {
 }
 
 .menu a {
+  position: relative;
   color: #fff;
   text-decoration: none;
-  padding: 10px 20px;
+  margin: 0 15px;
+  letter-spacing: 2px;
+  font-size: 1.2em;
+  transition: 0.7s;
 }
 
-.menu .active {
+.menu .active a {
   color: #cfbe11;
 }
 
@@ -77,10 +126,11 @@ body {
 .main {
   margin: 0 auto;
   width: 80vw;
-  height: 80vh;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
   align-items: center;
+  padding: 50px;
 }
 
 .info-content span {
@@ -120,6 +170,7 @@ body {
 .logo2 {
   font-size: 8em;
   color: #fff;
+  cursor: default;
 }
 
 .logo2 span {

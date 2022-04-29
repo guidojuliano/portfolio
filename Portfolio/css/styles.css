@@ -150,6 +150,7 @@ header ul {
   margin-top: 10px;
   cursor: pointer;
   box-shadow: 1px 3px 11px -5px rgba(130, 28, 156, 1);
+  font-family: "Montserrat", sans-serif;
 }
 
 .download-cv:hover {
@@ -380,6 +381,7 @@ header ul {
   background-color: #cfbe11;
   border-radius: 20px;
   color: #821c9c;
+  font-family: "Montserrat", sans-serif;
   cursor: pointer;
 }
 
@@ -423,4 +425,9 @@ header ul {
 .sotial-network i:hover {
   color: #821c9c;
   transition: ease-in 0.5s;
+}
+
+::placeholder {
+  color: rgb(197, 187, 187);
+  font-family: "Montserrat", sans-serif;
 }

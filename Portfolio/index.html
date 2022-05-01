@@ -22,6 +22,34 @@
     />
 
     <script src="https://unpkg.com/scrollreveal"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      window.onload = function () {
+        document
+          .getElementById("contact-form")
+          .addEventListener("submit", function (event) {
+            event.preventDefault();
+            this.contact_number.value = (Math.random() * 100000) | 0;
+            emailjs.sendForm("contact_service", "contact_form", this).then(
+              function () {
+                console.log("SUCCESS!");
+              },
+              function (error) {
+                console.log("FAILED...", error);
+              }
+            );
+          });
+      };
+    </script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("AVggx34Afn4A5_7Tn");
+      })();
+    </script>
+    <script src="./js/main.js"></script>
   </head>
   <body>
     <section class="section" id="home">
@@ -140,11 +168,15 @@
           <div class="logo2">
             <h1>G<span>J</span></h1>
           </div>
-          <form class="form-contact">
-            <input type="text" placeholder="Name" />
-            <input type="email" placeholder="Email" />
-            <textarea placeholder="Place your message here..."></textarea>
-            <button type="submit" class="btn-submit">Send message</button>
+          <form class="form-contact" id="contact-form">
+            <input type="hidden" name="contact_number" />
+            <input type="text" placeholder="Name" name="user_name" />
+            <input type="email" placeholder="Email" name="user_email" />
+            <textarea
+              name="message"
+              placeholder="Place your message here..."
+            ></textarea>
+            <input type="submit" value="Send" class="btn-submit" id="submit" />
           </form>
         </div>
       </div>

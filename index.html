@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/modal.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/50e9b1b119.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      window.onload = function () {
+        document
+          .getElementById("contact-form")
+          .addEventListener("submit", function (event) {
+            event.preventDefault();
+            this.contact_number.value = (Math.random() * 100000) | 0;
+            emailjs.sendForm("contact_service", "contact_form", this).then(
+              function () {
+                console.log("SUCCESS!");
+              },
+              function (error) {
+                console.log("FAILED...", error);
+              }
+            );
+          });
+      };
+    </script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("AVggx34Afn4A5_7Tn");
+      })();
+    </script>
+    <script src="./js/main.js"></script>
+  </head>
+  <body>
+    <section class="section" id="home">
+      <div class="wrapper">
+        <header>
+          <div class="brand">
+            <h1>G<span>J</span></h1>
+          </div>
+          <nav class="navbar">
+            <ul class="menu menu_item">
+              <li class="active menu_item" data-url="home">
+                <a href="#home">Home</a>
+              </li>
+              <li class="menu_item" data-url="about">
+                <a href="#about">About me</a>
+              </li>
+              <li class="menu_item" data-url="portfolio">
+                <a href="#portfolio">Portfolio</a>
+              </li>
+              <li class="menu_item" data-url="contact">
+                <a href="#contact">Contact</a>
+              </li>
+            </ul>
+          </nav>
+        </header>
+
+        <main class="main">
+          <div class="info-content">
+            <h1>I'm Guido <span>Juliano</span></h1>
+            <p>Web developer, electronic technical and student.</p>
+            <a href="/Portfolio/archivos/CV_MAZZUCHINI.pdf" download>
+              <button class="download-cv">Download CV</button>
+            </a>
+          </div>
+          <div class="logo animate__animated animate__pulse animate__infinite">
+            <h1>G<span>J</span></h1>
+          </div>
+        </main>
+      </div>
+    </section>
+    <section class="section" id="about">
+      <div class="about">
+        <img
+          class="image-profile"
+          src="./img/fotoperfil.jpg"
+          alt="foto_perfil"
+        />
+        <div class="about-info">
+          <h2 class="about-me">About me</h2>
+          <div class="divider"></div>
+          <p class="p1">
+            I'm Guido Juliano i have 28 years old, I'm living in Resistencia,
+            Chaco. I'm studing Information Systems Engineering in UTN and at
+            this moment working in the Ministry of Education as a full stack
+            developer.
+          </p>
+          <p class="p2">
+            Now we are working with Python, HTML, CSS, JavaScript, Django,
+            Postgres, containers of Docker and repositories and versioned whit
+            Github. I consider myself a person who adapts very quickly in the
+            workplace, I am quite self-taught and I like to work in a team.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="portfolio">
+      <div class="portfolio">
+        <div class="portfolio-headings">
+          <h2>My Portfolio</h2>
+          <div class="divider"></div>
+        </div>
+
+        <div class="container">
+          <div class="card">
+            <div class="card__img">
+              <video
+                src="/Portfolio/img/ecoblog.mp4"
+                autoplay
+                loop
+                muted
+              ></video>
+            </div>
+            <div class="card__title">
+              <h2>Ecoblog</h2>
+            </div>
+            <div class="card__projects-links">
+              <a
+                href="https://github.com/guidojuliano/RepositorioEcoBlog"
+                target="_blank"
+              >
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a
+                href="https://www.youtube.com/watch?v=oHKKnqnNNqk&t=11s"
+                target="_blank"
+              >
+                <i class="fa-brands fa-youtube"></i>
+              </a>
+            </div>
+            <div class="project-details-content">
+              <button class="project-details download-cv">
+                Project Details
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="contact">
+      <div class="contact-section">
+        <div class="contact-headings">
+          <h2>Contact</h2>
+          <div class="divider"></div>
+        </div>
+
+        <div class="container-contact">
+          <div class="logo2">
+            <h1>G<span>J</span></h1>
+          </div>
+          <form class="form-contact" id="contact-form">
+            <input type="hidden" name="contact_number" />
+            <input type="text" placeholder="Name" name="user_name" />
+            <input type="email" placeholder="Email" name="user_email" />
+            <textarea
+              name="message"
+              placeholder="Place your message here..."
+            ></textarea>
+            <button
+              type="submit"
+              class="btn-submit"
+              id="submit"
+              data-open="modal1"
+            >
+              SEND
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <div class="modal" id="modal1" data-animation="slideInOutLeft">
+      <div class="modal-dialog">
+        <header class="modal-header">
+          The header of the first modal
+          <button class="close-modal" aria-label="close modal" data-close>
+            ✕
+          </button>
+        </header>
+        <section class="modal-content">
+          <p>
+            <strong
+              >Press ✕, ESC, or click outside of the modal to close it</strong
+            >
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
+            repellendus reprehenderit accusamus totam ratione! Nesciunt, nemo
+            dolorum recusandae ad ex nam similique dolorem ab perspiciatis qui.
+            Facere, dignissimos. Nemo, ea.
+          </p>
+          <p>
+            Nor again is there anyone who loves or pursues or desires to obtain
+            pain of itself, because it is pain, but because occasionally
+            circumstances occur in which toil and pain can procure him some
+            great pleasure. To take a trivial example, which of us ever
+            undertakes laborious physical exercise, except to obtain some
+            advantage from it? But who has any right to find fault with a man
+            who chooses to enjoy a pleasure that has no annoying consequences,
+            or one who avoids a pain that produces no resultant pleasure
+          </p>
+          <p>
+            Nullam vitae enim vel diam elementum tincidunt a eget metus.
+            Curabitur finibus vestibulum rutrum. Vestibulum semper tellus vitae
+            tortor condimentum porta. Sed id ex arcu. Vestibulum eleifend tortor
+            non purus porta dapibus
+          </p>
+          <p>
+            Nor again is there anyone who loves or pursues or desires to obtain
+            pain of itself, because it is pain, but because occasionally
+            circumstances occur in which toil and pain can procure him some
+            great pleasure. To take a trivial example, which of us ever
+            undertakes laborious physical exercise, except to obtain some
+            advantage from it? But who has any right to find fault with a man
+            who chooses to enjoy a pleasure that has no annoying consequences,
+            or one who avoids a pain that produces no resultant pleasure
+          </p>
+        </section>
+        <footer class="modal-footer">The footer of the first modal</footer>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer-content">
+        <h2>Guido Juliano Ubaldi</h2>
+        <h5>Web Developer</h5>
+      </div>
+      <div class="sotial-network">
+        <a href="https://www.instagram.com/guidojulianou/"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+        <a href="https://www.linkedin.com/in/guidojuliano/"
+          ><i class="fa-brands fa-linkedin-in"></i
+        ></a>
+      </div>
+    </footer>
+    <script src="./js/main.js"></script>
+    <script>
+      ScrollReveal().reveal(".header");
+      ScrollReveal().reveal(".info-content", { delay: 500 });
+      ScrollReveal().reveal(".logo", { delay: 1000 });
+      ScrollReveal().reveal(".image-profile");
+      ScrollReveal().reveal(".about-me", { delay: 500 });
+      ScrollReveal().reveal(".p1", { delay: 1000 });
+      ScrollReveal().reveal(".p2", { delay: 1500 });
+      ScrollReveal().reveal(".portfolio-headings", { delay: 500 });
+      ScrollReveal().reveal(".card", { delay: 1000 });
+    </script>
+  </body>
+</html>

@@ -189,13 +189,14 @@ header ul {
   width: 100%;
   background: black;
   align-items: center;
+  padding-left: 5em;
 }
 
 .about img {
   height: auto;
   width: 80%;
   grid-column: 1/5;
-  border: 7px solid black;
+  border: 7px solid #cfbe11;
 }
 
 .about-info h2 {

@@ -118,6 +118,17 @@ header ul {
   color: #cfbe11;
 }
 
+.btn-menu{
+  font-size: 25px;
+  color:#fff;
+  cursor: pointer;
+  display: none;
+}
+
+ul.show {
+  top: 65px;
+}
+
 .menu a:hover {
   color: #cfbe11;
   transition: ease-in 0.5s;
@@ -431,4 +442,80 @@ header ul {
 ::placeholder {
   color: rgb(197, 187, 187);
   font-family: "Montserrat", sans-serif;
+}
+
+@media screen and (max-width: 480px) {
+  .btn-menu {
+    display: inline-flex;
+  }
+
+  .menu{
+    position: fixed;
+  }
+
+  .logo {
+    display: none;
+  }
+  .main {
+    margin: 0 auto;
+    width: 80%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+  }
+
+  .about{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background: black;
+    align-items: center;
+    padding: 1em;
+  }
+
+  .about img {
+    display: none;
+  }
+
+  .contact-section{
+    padding: 1em;
+
+  }
+
+  .divider{
+    margin-left: 6em;
+  }
+
+  .info-content{
+    text-align: center;
+  }
+
+  .logo2{
+    display: none;
+  }
+
+  .contact-headings {
+    text-align: center;
+    margin-left: 0em;
+  }
+
+  .container-contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 55vh;
+    
+  }
+
+  .form-contact{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 2em;  
+  margin-left:0 ;
+  }
 }

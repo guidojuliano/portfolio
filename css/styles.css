@@ -118,9 +118,10 @@ header ul {
   color: #cfbe11;
 }
 
-.btn-menu{
+.btn-menu {
+  margin-top: 0.5em;
   font-size: 25px;
-  color:#fff;
+  color: #fff;
   cursor: pointer;
   display: none;
 }
@@ -449,8 +450,49 @@ ul.show {
     display: inline-flex;
   }
 
-  .menu{
+  .menu_items {
+    margin-top: 50px;
+    margin-left: -40px;
     position: fixed;
+    width: 100%;
+    height: calc(100% - 65px);
+    background: #441f49;
+    opacity: 0.95;
+    top: -100vh;
+    text-align: center;
+    transition: all 0.2s;
+    flex-direction: column;
+  }
+
+  header.down .menu_items {
+    margin-top: 23px;
+  }
+
+  header.down .menu_item a {
+    color: #fff;
+  }
+
+  header.down li.active a {
+    color: #cfbe11 !important;
+  }
+
+  .menu_items li {
+    margin: 30px 0 0 0;
+    line-height: 30px;
+  }
+
+  .menu_items li:hover {
+    color: #cfbe11;
+  }
+
+  .menu_items li a {
+    font-size: 30px;
+    color: #fff;
+    font-weight: bold;
+  }
+
+  .menu_items li a:hover {
+    color: #cfbe11;
   }
 
   .logo {
@@ -466,7 +508,7 @@ ul.show {
     padding: 50px;
   }
 
-  .about{
+  .about {
     display: flex;
     justify-content: center;
     width: 100%;
@@ -479,20 +521,19 @@ ul.show {
     display: none;
   }
 
-  .contact-section{
+  .contact-section {
     padding: 1em;
-
   }
 
-  .divider{
+  .divider {
     margin-left: 6em;
   }
 
-  .info-content{
+  .info-content {
     text-align: center;
   }
 
-  .logo2{
+  .logo2 {
     display: none;
   }
 
@@ -507,15 +548,32 @@ ul.show {
     justify-content: center;
     width: 100%;
     height: 55vh;
-    
   }
 
-  .form-contact{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  margin-top: 2em;  
-  margin-left:0 ;
+  .form-contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 2em;
+    margin-left: 0;
+  }
+
+  .footer {
+    height: 150px;
+  }
+  .footer h2 {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 858px) and (orientation: landscape) {
+  .menu_item li {
+    margin: 5px 0 0 0;
+  }
+
+  .menu_item {
+    overflow: scroll;
+    height: calc(100% - 65px);
   }
 }

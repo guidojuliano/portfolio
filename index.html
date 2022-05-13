@@ -37,17 +37,15 @@
             this.contact_number.value = (Math.random() * 100000) | 0;
             emailjs.sendForm("contact_service", "contact_form", this).then(
               function () {
-                
-                let form = document.getElementById("contact-form")
+                let form = document.getElementById("contact-form");
 
-                form.reset()
-                
+                form.reset();
+
                 console.log("SUCCESS!");
                 Swal.fire({
-                  icon: 'success',
-                  title: 'Mail enviado!',
-                })
-
+                  icon: "success",
+                  title: "Mail enviado!",
+                });
               },
               function (error) {
                 console.log("FAILED...", error);
@@ -95,8 +93,11 @@
           <div class="info-content">
             <h1>I'm Guido <span>Juliano</span></h1>
             <p>Web developer, electronic technical and student.</p>
-            <a href="./archivos/CV_MAZZUCHINI.pdf" download>
-              <button class="download-cv">Download CV</button>
+            <a
+              href="https://drive.google.com/file/d/1aGMnaTj4yyVU9tm_M8-EfLq9zHKSDtXn/view?usp=sharing"
+              target="_blank"
+            >
+              <button class="download-cv">View Resumee</button>
             </a>
           </div>
           <div class="logo animate__animated animate__pulse animate__infinite">
@@ -181,8 +182,20 @@
           </div>
           <form class="form-contact" id="contact-form">
             <input type="hidden" name="contact_number" />
-            <input type="text" placeholder="Name" name="user_name" id="username" required/>
-            <input type="email" placeholder="Email" name="user_email" id="email" required/>
+            <input
+              type="text"
+              placeholder="Name"
+              name="user_name"
+              id="username"
+              required
+            />
+            <input
+              type="email"
+              placeholder="Email"
+              name="user_email"
+              id="email"
+              required
+            />
             <textarea
               name="message"
               placeholder="Place your message here..."
@@ -199,7 +212,7 @@
         </div>
       </div>
     </section>
-    
+
     <footer class="footer">
       <div class="footer-content">
         <h2>Guido Juliano Ubaldi</h2>

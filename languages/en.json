@@ -1,0 +1,10 @@
+{
+  "home": {
+    "navbar": {
+      "menu-home": "Home",
+      "menu-about": "About",
+      "menu-portfolio": "Projects",
+      "menu-contact": "Contact"
+    }
+  }
+}

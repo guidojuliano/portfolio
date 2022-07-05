@@ -64,25 +64,28 @@
     <script src="./js/main.js"></script>
   </head>
   <body>
+    <div class="btn-container">
+      <button type="button" class="btn-lan" id="btn-lan"><p>ES</p></button>
+    </div>
     <section class="section" id="home">
       <div class="wrapper">
         <header>
           <div class="brand">
             <h1>G<span>J</span></h1>
           </div>
-          <nav class="navbar">
+          <nav class="navbar" id="navbar">
             <ul class="menu menu_items">
               <li class="active menu_item" data-url="home">
-                <a href="#home">Home</a>
+                <a href="#home" id="menu-home">Home</a>
               </li>
               <li class="menu_item" data-url="about">
-                <a href="#about">About me</a>
+                <a href="#about" id="menu-about">About me</a>
               </li>
               <li class="menu_item" data-url="portfolio">
-                <a href="#portfolio">Projects</a>
+                <a href="#portfolio" id="menu-portfolio">Projects</a>
               </li>
               <li class="menu_item" data-url="contact">
-                <a href="#contact">Contact</a>
+                <a href="#contact" id="menu-contact">Contact</a>
               </li>
             </ul>
           </nav>
@@ -92,11 +95,11 @@
         </header>
 
         <main class="main">
-          <div class="info-content">
+          <div class="info-content" id="info-content">
             <h1>I'm Guido <span>Juliano</span></h1>
             <p>Web developer, electronic technical and student.</p>
             <a
-              href="https://drive.google.com/file/d/1aGMnaTj4yyVU9tm_M8-EfLq9zHKSDtXn/view?usp=sharing"
+              href="https://drive.google.com/file/d/1mEF542Q2lMyFx2yFqrm50wuOxQ95wKP5/view?usp=sharing"
               target="_blank"
             >
               <button class="download-cv">View Resumee</button>
@@ -114,6 +117,7 @@
           class="image-profile"
           src="./img/fotoperfil2-min.jpg"
           alt="foto_perfil"
+          loading="lazy"
         />
         <div class="about-info">
           <h2 class="about-me">About me</h2>
@@ -187,6 +191,39 @@
               <button
                 class="project-details download-cv"
                 href="https://github.com/guidojuliano/portfolio"
+                target="_blank"
+              >
+                Project Details
+              </button>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__img">
+              <iframe
+                src="https://giphy.com/embed/46zKt1CSJ51Pl2QobN"
+                frameborder="0"
+                class="giphy-embed"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="card__title">
+              <h2>Artworks</h2>
+            </div>
+            <div class="card__projects-links">
+              <a
+                href="https://github.com/guidojuliano/spa-artworks-nbch"
+                target="_blank"
+              >
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="https://artworksguido.vercel.app/" target="_blank">
+                <i class="fa-solid fa-globe"></i>
+              </a>
+            </div>
+            <div class="project-details-content">
+              <button
+                href="https://github.com/guidojuliano/spa-artworks-nbch/blob/master/README.md"
+                class="project-details download-cv"
                 target="_blank"
               >
                 Project Details

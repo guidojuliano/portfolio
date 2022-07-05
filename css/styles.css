@@ -179,7 +179,10 @@ ul.show {
   font-size: 8em;
   text-align: center;
 }
-
+.logo i {
+  color: #cfbe11;
+  font-size: 10em;
+}
 .logo span {
   color: #cfbe11;
 }
@@ -460,6 +463,34 @@ ul.show {
   font-family: "Montserrat", sans-serif;
 }
 
+/* LANGUAGE BUTTON */
+
+.btn-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.btn-lan {
+  border-radius: 50%;
+  padding: 8px;
+  background-color: #cfbe11;
+  cursor: pointer;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
+  transition: all 500ms ease;
+}
+
+.btn-lan p {
+  font-size: 1.5em;
+  color: #111;
+  font-weight: bold;
+  letter-spacing: -1px;
+}
+
+.btn-lan:hover {
+  box-shadow: 0px 1px 10px rgb(255, 255, 255);
+}
+
 /* RESPONSIVE MOBILE */
 
 @media screen and (max-width: 500px) {
@@ -471,10 +502,11 @@ ul.show {
     margin-top: 50px;
     margin-left: -40px;
     position: fixed;
+    backdrop-filter: blur(10px);
     width: 100%;
     height: calc(100% - 65px);
-    background: #441f49;
-    opacity: 0.95;
+    background-color: rgba(255, 255, 255, 0.1);
+
     top: -100vh;
     text-align: center;
     transition: all 0.2s;

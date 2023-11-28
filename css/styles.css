@@ -575,7 +575,7 @@ ul.show {
   }
 
   .contact-section {
-    padding: 1em;
+    padding-top: 10em;
   }
 
   .divider {
@@ -617,7 +617,7 @@ ul.show {
   }
 
   .container-contact {
-    margin-top: 15em;
+    margin-top: 10em;
     display: flex;
     align-items: center;
     justify-content: center;

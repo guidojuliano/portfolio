@@ -65,7 +65,15 @@
   </head>
   <body>
     <div class="btn-container">
-      <button type="button" class="btn-lan" id="btn-lan"><p>ES</p></button>
+      <button
+        type="button"
+        class="btn-lan"
+        id="btn-lan"
+        onclick="changeLanguage()"
+        data-translate="languageButton"
+      >
+        <span></span>
+      </button>
     </div>
     <section class="section" id="home">
       <div class="wrapper">
@@ -76,16 +84,30 @@
           <nav class="navbar" id="navbar">
             <ul class="menu menu_items">
               <li class="active menu_item" data-url="home">
-                <a href="#home" id="menu-home">Home</a>
+                <a href="#home" id="menu-home" data-translate="menuHome"
+                  >Home</a
+                >
               </li>
               <li class="menu_item" data-url="about">
-                <a href="#about" id="menu-about">About me</a>
+                <a href="#about" id="menu-about" data-translate="menuAbout"
+                  >About me</a
+                >
               </li>
               <li class="menu_item" data-url="portfolio">
-                <a href="#portfolio" id="menu-portfolio">Projects</a>
+                <a
+                  href="#portfolio"
+                  id="menu-portfolio"
+                  data-translate="menuPortfolio"
+                  >Projects</a
+                >
               </li>
               <li class="menu_item" data-url="contact">
-                <a href="#contact" id="menu-contact">Contact</a>
+                <a
+                  href="#contact"
+                  id="menu-contact"
+                  data-translate="menuContact"
+                  >Contact</a
+                >
               </li>
             </ul>
           </nav>
@@ -96,13 +118,15 @@
 
         <main class="main">
           <div class="info-content" id="info-content">
-            <h1>I'm Guido <span>Juliano</span></h1>
-            <p>Web developer, electronic technical and student.</p>
+            <h1 id="presentation-name" data-translate="presentationName">
+              I'm Guido <span>Juliano</span>
+            </h1>
+            <p id="presentation-description">Web developer.</p>
             <a
               href="https://drive.google.com/file/d/1SYf1gFTbw0W2uhM9KZYfvaJMgQA5qbjg/view?usp=sharing"
               target="_blank"
             >
-              <button class="download-cv">View Resumee</button>
+              <button class="download-cv">Resumee</button>
             </a>
           </div>
           <div class="logo animate__animated animate__pulse animate__infinite">
@@ -120,9 +144,11 @@
           loading="lazy"
         />
         <div class="about-info">
-          <h2 class="about-me">About me</h2>
+          <h2 class="about-me" id="about-me" data-translate="aboutMe">
+            About me
+          </h2>
           <div class="divider"></div>
-          <p class="p1">
+          <p class="p1" id="about-me-part-one" data-translate="aboutMePartOne">
             Hey there! I'm Guido Juliano, a self-taught Web Developer based in
             Resistencia, Chaco, Argentina. I have a passion for crafting dynamic
             web applications using React JS and TypeScript. With a strong
@@ -131,7 +157,7 @@
             expanding my skillset to stay ahead in the ever-evolving field of
             web development.
           </p>
-          <p class="p2">
+          <p class="p2" id="about-me-part-two" data-translate="aboutMePartTwo">
             I thrive in fast-paced, collaborative environments and enjoy working
             alongside talented teams. My ability to adapt swiftly and
             continuously learn empowers me to tackle diverse projects
@@ -145,7 +171,7 @@
     <section class="section" id="portfolio">
       <div class="portfolio">
         <div class="portfolio-headings">
-          <h2>Projects</h2>
+          <h2 id="projects" data-translate="projects">Projects</h2>
           <div class="divider"></div>
         </div>
 
@@ -179,23 +205,28 @@
           </div>
           <div class="card">
             <div class="card__img">
-              <img src="./img/porfolio.gif" />
+              <img
+                src="https://media4.giphy.com/media/xT0Gqcmc4NsPgBVQEU/giphy.gif?cid=ecf05e479v1pi6yozzg4kwwi1n0pymqr9s5swykfu4faim7p&ep=v1_gifs_search&rid=giphy.gif&ct=g"
+              />
             </div>
             <div class="card__title">
-              <h2>Porfolio</h2>
+              <h2>Tetris</h2>
             </div>
             <div class="card__projects-links">
               <a
-                href="https://github.com/guidojuliano/portfolio"
+                href="https://github.com/guidojuliano/tetris-react"
                 target="_blank"
               >
                 <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="https://tetris-react-gilt.vercel.app/" target="_blank">
+                <i class="fa-solid fa-globe"></i>
               </a>
             </div>
             <div class="project-details-content">
               <button
                 class="project-details download-cv"
-                href="https://github.com/guidojuliano/portfolio"
+                href="https://github.com/guidojuliano/tetris-react"
                 target="_blank"
               >
                 Project Details
@@ -204,12 +235,9 @@
           </div>
           <div class="card">
             <div class="card__img">
-              <iframe
-                src="https://giphy.com/embed/46zKt1CSJ51Pl2QobN"
-                frameborder="0"
-                class="giphy-embed"
-                allowfullscreen
-              ></iframe>
+              <img
+                src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdHhkbmk1ZG93bW5vbmtnOWtmYWttNHByZTg0Mmtya3Z1dDg3Y2czbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/46zKt1CSJ51Pl2QobN/giphy.gif"
+              /><img />
             </div>
             <div class="card__title">
               <h2>Artworks</h2>
@@ -241,7 +269,7 @@
     <section class="section" id="contact">
       <div class="contact-section">
         <div class="contact-headings">
-          <h2>Contact</h2>
+          <h2 id="contact" data-translate="contact">Contact</h2>
           <div class="divider"></div>
         </div>
 

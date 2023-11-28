@@ -649,6 +649,10 @@ ul.show {
     margin: 0;
     padding: 0;
   }
+
+  .btn-lan {
+    box-shadow: none; /* Elimina la sombra en dispositivos móviles */
+  }
 }
 
 @media screen and (max-width: 858px) and (orientation: landscape) {
